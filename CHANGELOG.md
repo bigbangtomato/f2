@@ -6,6 +6,7 @@
 
 ## [Unreleased]
 
+- 修复抖音作品列表等接口被 Argus 网关返回 403 的问题：请求自动附加 `x-tt-argus`，并从 cookie 读取 `UIFID`/`UIFID_TEMP` 发送 `uifid` 请求头。
 - 测试配置支持通过环境变量 `F2_TEST_<APP>_<KEY>` 与 `conf/test.local.yaml` 覆盖，个人 cookie 无需写入仓库。
 - `wheel` 不再打包 `f2/apps/*/test` 测试目录与 `conf/test.yaml` 测试配置。
 - 新增 `security` 工作流：`gitleaks` 泄露扫描与 `wheel` 内容检查。
